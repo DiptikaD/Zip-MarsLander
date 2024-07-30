@@ -67,7 +67,7 @@ public class Vehicle {
         // set new velocity to result of computeDeltaV function.
         Velocity = computeDeltaV();
         // subtract speed from Altitude
-        Altitude = Altitude -(Gravity*10);
+        Altitude = Altitude -Velocity;
         // subtract burn amount fuel used from tank
         Fuel = Fuel - burnAmount;
     }
