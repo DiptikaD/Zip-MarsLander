@@ -9,6 +9,18 @@ public class OnBoardComputer implements BurnStream {
         int currentStatus = status.getStatus();
 
         int burn = 0;
+
+        if (velocity == 2){
+            burn = 100;
+        } else if (altitude >6000){
+            burn = 100;
+        } else if (velocity > 100){
+            burn = 200;
+        } else if (altitude >100){
+            burn =100;
+        } else {
+            burn =198;
+        }
         
         System.out.println(burn); /*hack!*/
         return burn;

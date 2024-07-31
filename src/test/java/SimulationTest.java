@@ -19,6 +19,8 @@ public class SimulationTest {
 
     @Test
     public void runSimulationDead() {
+        // it crashed into earth at max velocity, everyone is dead
+        //changed test to be dead instead of crashed
         int[] burns = {0,0,0,0,0};
         BurnStream burnSource = new BurnDataStream(burns);
         Simulation game = new Simulation(new Vehicle(5000));
